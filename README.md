@@ -2,4 +2,5 @@
 my first repository in git
 
 OK actually i changed nothing!
-but its a good test!
+
+no its not only a good test but a nice trip!
