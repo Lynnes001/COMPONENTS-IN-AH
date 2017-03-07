@@ -1,0 +1,41 @@
+.shortScanTable{
+	background:#000;
+	border:0;
+	text-align: center;
+	vertical-align: center;
+}
+.shortScanTable tr{
+	background:#FFF;
+	height: 50px;
+}
+.shortScanTable td{
+	width: 150px;
+}
+.shortScanTable input{
+	width: 120px;
+}
+
+
+.scanTable{
+	background:#000;
+	border:0;
+	text-align: center;
+	vertical-align: center;
+}
+.scanTable tr{
+	background:#FFF;
+	height: 50px;
+}
+.scanTable td{
+	width: 150px;
+}
+.scanTable input{
+	width: 120px;
+}
+
+.edittocheck{
+	cursor:pointer;
+}
+.deltocancel{
+	cursor:pointer;
+}

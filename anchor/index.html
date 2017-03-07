@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导航栏+标签页切换</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<style type="text/css">
+.left{
+	float: left;
+	width: 200px;
+	height: 100%;
+	background-color: lightblue;
+}
+
+.current{
+	color: white !important;
+}
+
+.currentDot{
+	background: white !important;
+}
+
+</style>
+</head>
+<body>
+
+<div class="left">
+	<div class="nav" id="nav">
+		<ul class="navline">
+			<li><span class="navtitle">
+					<a href="#title1" id="link1">toTitle1</a>
+				</span>
+				<div class="navicon" id="dotlink1"></div></li>
+			<li><span class="navtitle">
+				<a href="#title2" id="link2">toTitle2</a>
+				</span>
+				<div class="navicon" id="dotlink2"></div></li>
+			<li><span class="navtitle">
+				<a href="#title3" id="link3">toTitle3</a>
+				</span>
+				<div class="navicon" id="dotlink3"></div></li>
+			<li><span class="navtitle">
+				<a href="#title4" id="link4">toTitle4</a>
+				</span>
+				<div class="navicon" id="dotlink4"></div></li>
+		</ul>
+	</div>
+</div>
+
+<div class="mainbody">
+	<div class="header">
+		<h2>某某检查计划</h2>
+		<div style="display: flex;">
+			<div class="lrcontrol">
+				<p id="turnleft"> &lt </p>
+				<p id="turnright"> &gt </p>
+			</div>
+			<ul class="pagetips" id="pagetips">
+				<li class="tip" value="1" id="pagebtn1">某某系统检查1</li>
+				<li class="tip" value="2" id="pagebtn2">某某系统检查2</li>
+				<li class="tip" value="3" id="pagebtn3">某某系统检查3</li>
+			</ul>
+		</div>
+	</div>
+	<div class="pages" id="page1">
+		<div id="title1">
+			<h1>i am title1</h1>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+		</div>
+		<div id="title2">
+			<h1>i am title2</h1>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+		</div>
+		<div id="title3">
+			<h1>i am title3</h1>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+		</div>
+		<div id="title4">
+			<h1>i am title4</h1>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+			<p>contents</p><p>contents</p><p>contents</p><p>contents</p>
+		</div>
+	</div>
+	<div class="pages" id="page2">
+		<iframe class="frame" src="https://www.baidu.com/"></iframe>
+	</div>
+	<div class="pages" id="page3">
+		<iframe class="frame" src="https://www.sogou.com"></iframe>
+	</div>
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#pagebtn1").click();
+
+});
+</script>
+
+</body>
+</html>

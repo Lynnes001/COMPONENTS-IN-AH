@@ -1,0 +1,153 @@
+html,body{
+	height: 100%;
+	margin: 0;
+}
+.mainbody{
+	height: 100%;
+	overflow: auto;
+	top: 0;
+	background-color: lightgrey;
+	box-sizing: border-box;
+	padding: 6px;
+}
+
+.contentblock{
+	width: 100%;
+	height: 500px;
+	background-color: white;
+	border: black .5px solid;
+	padding: 0;
+	margin-bottom: 20px;
+}
+.header{
+	display: flex;
+	width: 100%;
+	height: 60px;
+	background-color: skyblue;
+	color: white;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.pagetips{
+	display: flex;
+	height: 60px;
+	align-items: flex-end;
+}
+.tip{
+	display: flex;
+	height: 80%;
+	width: 120px;
+	margin-right: 5px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+.tip:hover{
+	color: black;
+	background-color: white;
+}
+.pages{
+	overflow: auto;
+	width: 85%;
+	height: 90%;
+	position: absolute;
+	background-color: white;
+}
+.frame{
+	width: 100%;
+	height: 800px;
+	background-color: white;
+}
+
+/*左右切换标签*/
+.lrcontrol{
+	display: flex;
+	color: white;			/*左右切换按钮颜色样式*/
+	align-items: flex-end;
+}
+.lrcontrol p{
+	margin: 0;
+	height: 80%;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
+}
+.lrcontrol p:hover{
+	color: blue; 		/*左右切换按钮鼠标放上去的颜色样式*/
+}
+#page1{
+	font-size: 30px;
+}
+#page1 div{
+	overflow: hidden;
+}
+
+/*============时间轴导航样式============*/
+.nav{
+	position: absolute;
+	left: 80px;
+	top: 0;
+	display: none;
+}
+
+.navline, .navline:before { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+.navline {
+	width: 95px;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 450px;
+} 
+
+/* The line */
+.navline:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+	background: white;		/*时间轴颜色*/
+	left: 100%;
+	margin-left: -10px;
+}
+
+.navline li {
+	position: relative;
+	height: 100px;
+}
+
+.navline a {
+	text-decoration: none;
+	color: black;
+}
+
+.navline li .navtitle {
+	position: absolute;
+}
+
+/* The dots */
+.navline li .navicon {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	background: #46a4da;   			/*dot中心颜色*/
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px white;   	/*dot外圈颜色*/
+	left: 100%;
+	margin-left: -13.75px;			/*dot与line对齐调整*/
+	margin-top: 3px;				/*文字与dot对齐调整*/
+}

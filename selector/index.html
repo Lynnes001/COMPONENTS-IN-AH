@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>工控工具箱-下拉菜单联动</title>
+	<link href="css/jquery-editable-select.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<button class="shortAddScan" onclick="var shortId = shortAddDev('111','dis');init();console.log(shortId);$('#sm'+shortId+' .edittocheck').click();">手动添加设备</button>
+<table class="shortScanTable" id="shortScanTable">
+	<tr>
+		<td>IP地址/域</td>
+		<td>所在区域</td>
+		<td>操作</td>
+	</tr>
+	<tr id="sc">
+		<td class="ipChange" id=>192.168.1.1</td>
+		<td class="disChange">区域1</td>
+		<td><span class="edittocheck">修改</span>&nbsp&nbsp<span class="deltocancel">删除</span></td>
+	</tr>
+</table>
+
+
+<br>
+<br>
+<button class="addScan" onclick="var id=addDev('192.168.1.1','','','','dis1');init(id+2);$('#sc'+id+' .edittocheck').click();">手动添加设备</button>
+<table class="scanTable" id="scanTable">
+	<tr>
+		<td>IP地址</td>
+		<td>设备类型</td>
+		<td>厂商</td>
+		<td>型号</td>
+		<td>所在区域</td>
+		<td>操作</td>
+	</tr>
+	<tr id="sc" style="display: none;">
+		<td class="ipChange" id=>192.168.1.1</td>
+		<td class="devtd1" id="devType0">设备类型1</td>
+		<td class="devtd2" id="devFac0">FAC</td>
+		<td class="devtd3" id="devNum0">NUM</td>
+		<td class="disChange">区域1</td>
+		<td><span class="edittocheck">修改</span>&nbsp&nbsp<span class="deltocancel">删除</span></td>
+	</tr>
+</table>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/jquery-editable-select.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	// var lenth = 3
+	addDev('192.168.1.1','','','','dis1');
+	addDev('192.168.1.2','','','','dis2');
+	addDev('192.168.1.3','','','','dis3');
+	var lenth = $("#scanTable tr").length;
+	init(lenth);
+});
+</script>
+</body>
+</html>
