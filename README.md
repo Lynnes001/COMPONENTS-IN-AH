@@ -1,5 +1,7 @@
-# factory1
+# Component
 在安恒公司实习期间，为兼容旧框架，使用jQuery完成的小组件
+
+During my internship in DBAPP security, in order to adapt old framework.
 
 ## 目录
 - `工控工具箱内容` selector
